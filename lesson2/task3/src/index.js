@@ -1,36 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './index.css';
-import React from 'reackt';
-import ReacktDOM from 'reackt-dom';
-
-
-const rootElement = document.querySelector('#root');
 
 const renderSeconds = time => {
-    const seconds = new Date(time).getSeconds;
-    const backgroundColor = seconds % 2 === 0 ?
-        '#fff' :
-        '#000';
-    const textColor = seconds % 2 !== 0 ?
-        '#fff' :
-        '#000';
-
-    const style = {
-        color: textColor,
-        backgroundColor
-    };
-
-
-    const element = ( <
-        div className = 'seconds'
-        style = { style } > { seconds } <
-        /div>
-    );
-
-    ReactDOM.render(element, rootElement);
+  const seconds = new Date(time).getSeconds();
+  const backgroundColor = seconds % 2 === 0
+    ? '#fff'
+    : '#000';
+  const textColor = seconds % 2 !== 0
+    ? '#000'
+    : '#fff';
+  const styles = {
+    backgroundColor,
+    color: textColor
+  };
+  const rootElement = document.querySelector('#root');
+  const element = (
+    <div
+      className="seconds"
+      style={styles}
+    >
+        {seconds}
+    </div>
+  );
+  ReactDOM.render(element, rootElement);
 };
 
-renderSeconds(new Date);
+renderSeconds(new Date());
 
-setInterval(() => {
-    renderSeconds(new Date)
-}, 1000);
+setInterval(() => renderSeconds(new Date()), 1000);
