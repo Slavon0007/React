@@ -13,7 +13,7 @@ const authorInfo = {
 
 ReactDOM.render(
     <Comment
-        author={authorInfo}
+        user={authorInfo}
         text="Good job!"
         date={new Date("2020-02-06T22:38:20.566Z")}
     />,
