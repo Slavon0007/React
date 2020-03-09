@@ -6,12 +6,12 @@ const age = birthDate => {
 
 const Greeting = props => {
     return (
-        <div className="greeting">
+        <header className="greeting">
             {`My name is
              ${props.firstName}
              ${props.lastName}. I'm
              ${props.birthDate} years old`}
-        </div>
+        </header>
     );
 };
 
