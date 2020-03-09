@@ -40,7 +40,7 @@ module.exports = (env, argv) => {
       hot: true
     }
   };
-
+ 
   if (isProduction) {
     config.plugins.push(
       new MiniCssExtractPlugin({
