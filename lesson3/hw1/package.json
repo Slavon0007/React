@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server -d --devtool eval-source-maps --open",
     "build": "webpack -p"
-  },
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
