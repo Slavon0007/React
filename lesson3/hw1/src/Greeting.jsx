@@ -1,8 +1,10 @@
 import React from 'react';
 
-const age = Math.floor((new Date() - new Date(birthDate)) / 1000*60*60*24*360);
+const age = (elem) => Math.floor((new Date() - Date.parse(elem)) / (1000*60*60*24*360));
 
 const Greeting = props => { 
+    
+
     return (
         <div className="greeting">
             {`My name is
