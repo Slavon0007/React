@@ -1,8 +1,6 @@
 import React from 'react';
 
-const getAge = birthDate => { 
-    return new Date().getFullYear() - new Date(birthDate).getFullYear();
-}
+const age = Math.floor((new Date() - new Date(birthDate)) / new Date(3600*24*1000));
 
 const Greeting = props => { 
     return (
@@ -10,7 +8,7 @@ const Greeting = props => {
             {`My name is
              ${props.name}
              . I'm
-             ${getAge(props.birthDate)} years old`}
+             ${age(props.birthDate)} years old`}
         </div>
     ); 
 };
