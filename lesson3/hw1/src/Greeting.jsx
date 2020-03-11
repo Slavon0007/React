@@ -6,13 +6,13 @@ const Greeting = props => {
     
 
     return (
-        <div className="greeting">
+        <div className="greeting"><h1>
             {`My name is
              ${props.firstName}
              ${props.lastName}
              . I'm
              ${age(props.birthDate)} years old`}
-        </div>
+       </h1> </div>
     ); 
 };
 
