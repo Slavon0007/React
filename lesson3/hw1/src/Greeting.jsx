@@ -1,8 +1,8 @@
 import React from 'react';
 
-const age = (elem) => Math.floor((new Date() - Date.parse(elem)) / (1000*60*60*24*360));
+const age = (elem) => Math.floor((new Date() - Date.parse(elem)) / (1000*60*60*24*365));
 
-const Greeting = props => { 
+const Greeting = props => {  
     
 
     return (
@@ -11,5 +11,6 @@ const Greeting = props => {
          </div>
     ); 
 };
+
 
 export default Greeting;
