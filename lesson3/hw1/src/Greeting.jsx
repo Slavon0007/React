@@ -6,13 +6,9 @@ const Greeting = props => {
     
 
     return (
-        <div className="greeting"><h1>
-            {`My name is
-             ${props.firstName}
-             ${props.lastName}
-             . I'm
-             ${age(props.birthDate)} years old`}
-       </h1> </div>
+        <div className="greeting">
+            {`My name is ${props.firstName} ${props.lastName}. I'm ${age(props.birthDate)} years old`}
+         </div>
     ); 
 };
 
