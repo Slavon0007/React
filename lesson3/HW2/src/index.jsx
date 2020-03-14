@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import './styles.scss';
 import Profile from './Profile';
 
-const rootElem = document.querySelector('#root');
+const rootElement = document.querySelector('#root');
 
 const userData = {
     firstName: 'John',
@@ -12,4 +12,4 @@ const userData = {
     birthPlace: 'London'
 }
 
-ReactDOM.render(<Profile userData={userData}/>, rootElem);
+ReactDOM.render(<Profile userData={userData}/>, rootElement);

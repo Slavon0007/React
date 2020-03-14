@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from "moment";
-import './index.scss';
+import './styles.scss';
 
 
 
@@ -11,14 +11,14 @@ const date = date => moment(date).format("DD MMM YY");
 
 const Profile = props => {
     return (
-        <div>
-            <div className="profile__name">
+        <>
+            <h1 className="profile__name">
                 {`${props.userData.firstName} ${props.userData.lastName}`}
-            </div>
-            <div className="profile__birth">
+            </h1>
+            <p className="profile__birth">
                 {`Was born ${date(props.userData.birthDate)} in ${props.userData.birthPlace}`}
-            </div>
-        </div>
+            </p>
+        </>
     )
 };
 export default Profile;
