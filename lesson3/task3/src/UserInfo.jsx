@@ -9,7 +9,7 @@ const UserInfo = props => {
             name={props.author.name}
             />
             <div className="user-info__name">
-                {props.author.name}
+                {props.user.name}
             </div>
         </div>
     );
