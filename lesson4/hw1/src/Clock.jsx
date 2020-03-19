@@ -12,7 +12,7 @@ class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            localeTime:'7:00:51',
+            localeTime:'7:00:51 AM',
         }
 
         setInterval(() => {
