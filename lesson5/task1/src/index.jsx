@@ -1,8 +1,8 @@
-import React from'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import GoodButton from'./GoodButton';
+import './styles.scss';
+import GoodButton from './GoodButton';
 
-const rootElement = document.querySelector(#root);
+const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<GoodButton />, rootElement);
+ReactDOM.render(<GoodButton /> , rootElem);
