@@ -3,8 +3,8 @@ import './styles.scss'
 
 
 class GoodButton extends React.Component{
-    handleClick(){
-        alert(document.querySelector('.fancy-button').textContent);
+    handleClick(e){
+        alert('Good job')
     }
 
     render(){
