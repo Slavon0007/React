@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import moment, { utc } from 'moment';
+import moment from 'moment';
 import './clock.scss';
 
-const getLocaleTime = offset => {
-    const currentTime = new Date();
-    const utcOffset = currentTime.getTimezoneOffset() / 60;
-    return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+
+const localeTime = (offset) => {
+  const currentTime = new Date();
+  const currentTimeWthOffset = currentTime.setHours(currentTime.getHours() + offset);
+  return moment(currentTimeWthOffset).format('LTS');
+};
+
+class Clock extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      time: localeTime(props.offset)
+    };
+    setInterval(() => {
+      this.setState({
+        time: localeTime(props.offset)
+      });
+    }, 1000);
+  }
+  render(){
+    return (
+      <div className="clock">
+        <p className="clock__location">{this.props.location}</p>
+        <p className="clock__time">{this.state.time}</p>
+      </div>
+    );
+  }
 }
-
-class Clock extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            localeTime:'7:00:51 AM',
-        }
-
-        setInterval(() => {
-            this.setState({
-                localeTime: getLocaleTime(this.props.offset),
-            });
-        }, 1000);
-    }
-    render() {
-        return (
-            <div className="clock">
-                <div className="clock__location">{this.props.location}</div>
-                <div className="clock__time">{this.state.date.toLocaleTimeString(localeTime)}</div>
-            </div>
-        );
-    }
-}
-
 export default Clock;
