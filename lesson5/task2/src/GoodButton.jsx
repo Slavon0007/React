@@ -3,7 +3,7 @@ import './styles.scss'
 
 
 class GoodButton extends React.Component{
-    handelClick(){
+    handleClick(){
         alert('Good job!');
     }
 
@@ -11,11 +11,11 @@ class GoodButton extends React.Component{
         return(
             <button
             className="fancy-button"
-            onClick={this.handelClick}
+            onClick={this.handleClick}
         >
             Click me!
         </button>
-        )
+        );
 
     }
     
