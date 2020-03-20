@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.scss';
-import GoodButton from './GoodButton';
+import Counter from './Counter';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<GoodButton /> , rootElem);
+ReactDOM.render(<Counter /> , rootElem);
