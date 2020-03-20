@@ -4,33 +4,27 @@ const RED = '#f00';
 const GREEN = '#0f0';
 const BLUE = '#00f';
 
-
-class Colors extends Component{
-  setBodyColor = color =>{
+class Color extends Component{
+  setBodyColor = (color) => {
+    // console.log(e);
     document.body.style.backgroundColor = color;
   }
-
-
   render(){
-    return(
+    return (
       <div className="colors">
-        <button
-        style=({backgroundColor:RED,})
-        onClick={()=>this.setBodyColor(RED)}
-        className="colors__button"
-        />
-        <button
-        style=({backgroundColor:GREEN,})
-        onClick={()=>this.setBodyColor(GREEN)}
-        className="colors__button"
-        />
-        <button
-        style=({backgroundColor:BLUE,})
-        onClick={()=>this.setBodyColor(BLUE)}
-        className="colors__button"
-        />
+        <button style={{
+          backgroundColor:RED
+        }} className="colors__button" onClick={this.setBodyColor.bind(this, RED)} />
+        
+        <button style={{
+          backgroundColor:GREEN
+        }}className="colors__button" onClick={() => this.setBodyColor(GREEN)} />
+        
+        <button style={{
+          backgroundColor:BLUE
+        }}className="colors__button" onClick={() => this.setBodyColor(BLUE)} />
       </div>
-    )
+    );
   }
 }
-export default Colors;
+export default Color;
