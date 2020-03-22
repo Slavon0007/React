@@ -37,21 +37,21 @@ class ColorPIcker extends Component{
           <button
              className="picker__button picker__button_coral"
              onMouseOver={() => this.setColorName(CORAL)}
-             onMouseOut={() => this.clearColorField()}   
+             onMouseOut={() => this.clearColor()}   
           >
          
           </button>
           <button
              className="picker__button picker__button_aqua"
              onMouseOver={() => this.setColorName(AQUA)}
-             onMouseOut={() => this.clearColorField()}
+             onMouseOut={() => this.clearColor()}
           >
             
           </button>
           <button
              className="picker__button picker__button_bisque"
              onMouseOver={() => this.setColorName(BISQUE)}
-             onMouseOut={() => this.clearColorField()}   
+             onMouseOut={() => this.clearColor()}   
           >
          
           </button>
