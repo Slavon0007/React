@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Greeting from './Greeting';
-import onLogin from './Login';
-import onLogout from './Logout';
+import Login from './Login';
+import Logout from './Logout';
 
 class Auth extends Component{
   constructor(props){
@@ -25,8 +25,8 @@ class Auth extends Component{
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
         {this.state.isLoggedIn
-          ? <onLogout isLogin={this.handleLogout} />
-          : <onLogin isLogin={this.handleLogin} />}
+          ? <Logout onLogout={this.handleLogout} />
+          : <Login onLogin={this.handleLogin} />}
       </div>
     );
   }

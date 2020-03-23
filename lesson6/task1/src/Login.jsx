@@ -1,8 +1,8 @@
 import React from 'react';
 
-const onLogin = props => {
+const Login = props => {
     return (
-      <button className="btn login" onClick={props.isLogin}>Login</button>
+      <button className="btn login" onClick={props.onLogin}>Login</button>
     );
 }
-export default onLogin;
+export default Login;
