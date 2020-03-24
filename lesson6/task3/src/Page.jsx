@@ -1,5 +1,5 @@
 import React from 'react';
-import Massage from './Massage';
+import Massage from './Message';
 
 const text1 = "Hello , world";
 const text2 = "Anoher exciting text.";
