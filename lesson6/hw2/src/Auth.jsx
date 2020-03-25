@@ -7,7 +7,7 @@ import Spinner from './Spinner';
 
 class Auth extends Component {
   state = {
-    onlineSatus: true,
+    onlineSatus: false,
     markForSpinner: false
   };
   handleLogin = () => {
