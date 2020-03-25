@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import  './styles.scss';
 
 
-const Spiner = props => {
+const Spinner = props => {
   return (
       <span
-        className ='spiner'
+        className ='spinner'
         style={{width:props.size, height:props.size}}
       >
 
@@ -13,4 +13,4 @@ const Spiner = props => {
   )
 };
 
-export default Spiner;
+export default Spinner;
