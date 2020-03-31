@@ -11,7 +11,7 @@ class Auth extends Component {
     markForSpinner: false
   };
   handleLogin = () => {
-    this.changeMarkForSpinner();
+    //this.changeMarkForSpinner();
     this.setState({ onlineSatus: true });
   };
   handleLogout = () => {
